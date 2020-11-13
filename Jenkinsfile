@@ -24,7 +24,8 @@ pipeline {
                 }
                 stage('Test On Master') {
                     agent {
-                        label "mock"
+                        //label "mock"
+			label "principal"
                     }
                     steps {
 			    	sleep 10
