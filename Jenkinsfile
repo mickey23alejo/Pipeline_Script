@@ -8,7 +8,7 @@ pipeline {
                         label "principal"
                 }
         steps {
-                echo 'This stage will be executed first'
+                echo 'This stage will be executed firs'
                 }
         }
 
