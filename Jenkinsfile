@@ -18,7 +18,9 @@ pipeline {
                 stage('Test On Windows') {
                     steps {
 			sleep 10
-			java -jar JavaSimple.jar
+			bat "java -jar JavaSimple.jar"
+			// bat "java -jar JavaSimple.jar > salida.out"
+			// def out= readFile 'salida.out'
                         echo "Task1 on Parallel"
                     }
                     
