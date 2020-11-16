@@ -18,6 +18,7 @@ pipeline {
                 stage('Test On Windows') {
                     steps {
 			sleep 10
+			java -jar JavaSimple.jar
                         echo "Task1 on Parallel"
                     }
                     
