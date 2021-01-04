@@ -16,8 +16,11 @@ pipeline {
         stage('Run Tests') {
             parallel {
                 stage('Test On Windows') {
+			 agent {
+                        label "principal"
+                }
                     steps {
-			sleep 10
+			sleep 4
 			bat "java -jar JavaSimple.jar"
 			// bat "java -jar JavaSimple.jar > salida.out"
 			// def out= readFile 'salida.out'
@@ -31,7 +34,7 @@ pipeline {
 			//label "principal"
                     }
                     steps {
-			    	sleep 10
+			    	sleep 4
 				echo "Task2 on Parallel"
 			}
                 }
